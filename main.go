@@ -25,6 +25,7 @@ func main() {
 	/* Routes*/
 	route.AuthRoutes(r)
 	route.UserRoutes(r)
+	route.CourseRoutes(r)
 
 	port := "localhost:"+os.Getenv("PORT")
 	r.Run(port) // listen and serve on 0.0.0.0:8080 (for windows "localhost:8080")

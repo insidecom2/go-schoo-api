@@ -12,7 +12,7 @@ import (
 func AuthMiddleware(c *gin.Context) {
 	header := c.Request.Header.Get("Authorization")
 	if header == "" {
-		c.AbortWithStatusJSON(http.StatusUnauthorized, gin.H{"status" : false,"message" : "Unauthorized1"})
+		c.AbortWithStatusJSON(http.StatusUnauthorized, gin.H{"status" : false,"message" : "Unauthorized"})
 		return
 	}
 	tokenString := strings.Replace(header,"Bearer ","",1)

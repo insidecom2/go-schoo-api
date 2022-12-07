@@ -17,4 +17,5 @@ func InitModel() {
 		panic("Fail to connect Database")
 	}
 	Db.AutoMigrate(&User{})
+	Db.AutoMigrate(&Course{})
 }
